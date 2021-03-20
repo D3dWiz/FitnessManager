@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace GetInForm.Display
+namespace GetInForm.Presentation
 {
     public partial class PaymentForm : Form
     {

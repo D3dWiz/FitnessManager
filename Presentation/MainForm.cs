@@ -1,8 +1,8 @@
-﻿using GetInForm.Model;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using GetInForm.Model;
 
-namespace GetInForm.Display
+namespace GetInForm.Presentation
 {
     public partial class MainForm : Form
     {

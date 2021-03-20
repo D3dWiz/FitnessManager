@@ -1,4 +1,4 @@
-﻿namespace GetInForm.Display
+﻿namespace GetInForm.Presentation
 {
     partial class PaymentForm
     {
