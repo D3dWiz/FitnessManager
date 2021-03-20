@@ -13,6 +13,7 @@ namespace NEW_DESIGH.Model
             get { return memberInfos; }
             set { memberInfos = value; }
         }
+
         public DbSet<Member> Members
         {
             get { return members; }
@@ -25,12 +26,12 @@ namespace NEW_DESIGH.Model
             set { sales = value; }
         }
 
-
         public MemberDbContext()
         {
-            // guarantee that the database will automatically be created 
+            // guarantee that the database will automatically be created
             Database.EnsureCreated();
         }
+
         /// <summary>
         /// Конфигуриране на контекста
         /// </summary>
@@ -44,6 +45,5 @@ namespace NEW_DESIGH.Model
                 "Integrated Security=true"
                 );
         }
-
     }
 }

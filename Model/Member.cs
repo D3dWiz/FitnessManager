@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 namespace NEW_DESIGH.Model
 {
@@ -34,7 +33,7 @@ namespace NEW_DESIGH.Model
             set { dateExpiration = value; }
         }
 
-        MemberDbContext personDbContext = new MemberDbContext();
+        private MemberDbContext personDbContext = new MemberDbContext();
 
         //public override string ToString()
         //{

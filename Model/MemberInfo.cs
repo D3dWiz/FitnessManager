@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace NEW_DESIGH.Model
+﻿namespace NEW_DESIGH.Model
 {
     public class MemberInfo
     {
@@ -33,6 +31,7 @@ namespace NEW_DESIGH.Model
             get { return thirdName; }
             set { thirdName = value; }
         }
+
         public int Age
         {
             get { return age; }
