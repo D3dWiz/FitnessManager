@@ -40,7 +40,7 @@ namespace NEW_DESIGH.Model
         {
             optionsBuilder.UseSqlServer
                 (
-                "Server=(localdb)\\ProjectsV13;" +
+                "Server=(localdb)\\MSSQLLocalDB;" +
                 "Database=Members;" +
                 "Integrated Security=true"
                 );
