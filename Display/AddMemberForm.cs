@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace GetInForm
+namespace GetInForm.Display
 {
     public partial class AddMemberForm : Form
     {
@@ -10,7 +10,7 @@ namespace GetInForm
             InitializeComponent();
         }
 
-        private Form1 mainForm;
+        private MainForm mainForm;
 
         public bool add = false;
         public string firstName = "", secondName = "", thirdName = "", subscribtionPeriod = "";
@@ -20,7 +20,7 @@ namespace GetInForm
 
         private void AddMemberForm_Load(object sender, EventArgs e)
         {
-            mainForm = new Form1();
+            mainForm = new MainForm();
         }
 
         /// <summary>

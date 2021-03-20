@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace GetInForm
+namespace GetInForm.Display
 {
     public partial class MembersForm : Form
     {

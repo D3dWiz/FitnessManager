@@ -2,11 +2,11 @@
 using System;
 using System.Windows.Forms;
 
-namespace GetInForm
+namespace GetInForm.Display
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace GetInForm
         private double price = 0.00, currentPrice = 0.00, totalPrice = 0.00;
         private string subscribtionPeriod = "";
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             AddMemberForm = new AddMemberForm();
             MembersForm = new MembersForm();
