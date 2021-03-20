@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace NEW_DESIGH.Model
+namespace GetInForm.Model
 {
     public class MemberDbContext : DbContext
     {

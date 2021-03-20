@@ -1,13 +1,8 @@
-﻿using NEW_DESIGH.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using System;
 using System.Windows.Forms;
+using GetInForm.Model;
 
-namespace NEW_DESIGH
+namespace GetInForm
 {
     public partial class MembersForm : Form
     {

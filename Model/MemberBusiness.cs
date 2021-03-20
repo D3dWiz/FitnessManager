@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace NEW_DESIGH.Model
+namespace GetInForm.Model
 {
     class MemberBusiness
     {

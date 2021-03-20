@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace NEW_DESIGH.Model
+namespace GetInForm.Model
 {
     public class MemberInfo
     {

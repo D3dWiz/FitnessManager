@@ -1,4 +1,4 @@
-﻿namespace NEW_DESIGH
+﻿namespace GetInForm
 {
     partial class PaymentForm
     {
