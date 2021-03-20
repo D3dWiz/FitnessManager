@@ -1,7 +1,13 @@
-﻿using System;
+﻿using NEW_DESIGH.Model;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
-namespace GetInForm.Display
+namespace NEW_DESIGH
 {
     public partial class AddMemberForm : Form
     {
@@ -9,8 +15,7 @@ namespace GetInForm.Display
         {
             InitializeComponent();
         }
-
-        private MainForm mainForm;
+        Form1 mainForm;
 
         public bool add = false;
         public string firstName = "", secondName = "", thirdName = "", subscribtionPeriod = "";
@@ -20,7 +25,7 @@ namespace GetInForm.Display
 
         private void AddMemberForm_Load(object sender, EventArgs e)
         {
-            mainForm = new MainForm();
+            mainForm = new Form1();
         }
 
         /// <summary>
@@ -87,11 +92,14 @@ namespace GetInForm.Display
                     case 4: period = period.AddYears(2); cardPrice = 900.00; break;
                 }
 
+
                 //MemberInfo memberInfo = new MemberInfo();
                 //memberInfo.FirstName = firstName;
                 //memberInfo.SecondName = secondName;
                 //memberInfo.ThirdName = thirdName;
                 //memberInfo.Age = age;
+
+
 
                 //mainForm.memberDbContext.MemberInfos.Add(memberInfo);
 
@@ -148,7 +156,6 @@ namespace GetInForm.Display
 
             listBox1.SelectedItem = null;
         }
-
         /// <summary>
         /// Validation - allow only digits for the age textBox
         /// </summary>

@@ -1,6 +1,6 @@
-﻿namespace GetInForm.Presentation
+﻿namespace NEW_DESIGH
 {
-    partial class MainForm
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -66,72 +66,94 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button1.Location = new System.Drawing.Point(131, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 47);
             this.button1.TabIndex = 0;
             this.button1.Text = "Cash Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Location = new System.Drawing.Point(-1, -7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(831, 47);
+            this.panel1.Size = new System.Drawing.Size(831, 54);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel4.Location = new System.Drawing.Point(344, 37);
+            this.panel4.Location = new System.Drawing.Point(343, 47);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(193, 10);
+            this.panel4.Size = new System.Drawing.Size(193, 6);
             this.panel4.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(131, 37);
+            this.panel2.Location = new System.Drawing.Point(131, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(193, 10);
+            this.panel2.Size = new System.Drawing.Size(193, 6);
             this.panel2.TabIndex = 3;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(778, -1);
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnExit.Location = new System.Drawing.Point(777, 6);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(53, 47);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnMinimize
             // 
-            this.btnMinimize.Location = new System.Drawing.Point(706, -1);
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMinimize.Location = new System.Drawing.Point(718, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(53, 47);
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.Text = "_";
-            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(343, -1);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.Location = new System.Drawing.Point(343, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(194, 47);
             this.button2.TabIndex = 1;
             this.button2.Text = "Members";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
@@ -139,9 +161,9 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "voda 500 ml",
-            "voda 1 L",
-            "proteinov bar 100g"});
+            "water 500 ml",
+            "water 1 L",
+            "protein bar 100g"});
             this.comboBox1.Location = new System.Drawing.Point(19, 111);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(308, 23);
@@ -153,22 +175,28 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button5.Location = new System.Drawing.Point(19, 359);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(130, 69);
             this.button5.TabIndex = 3;
             this.button5.Text = "ADD";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.Maroon;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button6.Location = new System.Drawing.Point(196, 359);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(130, 71);
             this.button6.TabIndex = 3;
             this.button6.Text = "DELETE";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // listBox1
@@ -182,6 +210,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(19, 329);
             this.textBox1.Name = "textBox1";
             this.textBox1.PlaceholderText = "Enter quantity:";
@@ -191,57 +220,73 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button7.Location = new System.Drawing.Point(19, 71);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(130, 23);
+            this.button7.Size = new System.Drawing.Size(130, 34);
             this.button7.TabIndex = 5;
             this.button7.Text = "ADD Training";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button8.Location = new System.Drawing.Point(197, 71);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(130, 23);
+            this.button8.Size = new System.Drawing.Size(130, 34);
             this.button8.TabIndex = 5;
             this.button8.Text = "ADD Subscribtion";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button9.Location = new System.Drawing.Point(597, 346);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(161, 38);
             this.button9.TabIndex = 6;
             this.button9.Text = "MAKE PAYMENT";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button10.Location = new System.Drawing.Point(597, 390);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(161, 38);
             this.button10.TabIndex = 6;
             this.button10.Text = "COMPLETE ORDER";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
+            this.button11.BackColor = System.Drawing.Color.Maroon;
+            this.button11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button11.Location = new System.Drawing.Point(764, 346);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(43, 82);
             this.button11.TabIndex = 7;
             this.button11.Text = "X";
-            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Location = new System.Drawing.Point(343, 346);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(248, 6);
@@ -328,6 +373,10 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.Gray;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox2.Location = new System.Drawing.Point(19, 140);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -338,6 +387,10 @@
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.Gray;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox3.Location = new System.Drawing.Point(236, 140);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -368,6 +421,10 @@
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.Color.Gray;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox4.Location = new System.Drawing.Point(342, 71);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
@@ -378,6 +435,10 @@
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.Color.Gray;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox5.Location = new System.Drawing.Point(570, 71);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
@@ -388,6 +449,10 @@
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.Color.Gray;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox6.Location = new System.Drawing.Point(687, 71);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
@@ -396,10 +461,11 @@
             this.textBox6.Text = "Total:";
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // MainForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(829, 452);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -429,10 +495,10 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MainForm";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

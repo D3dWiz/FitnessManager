@@ -1,4 +1,8 @@
-﻿namespace GetInForm.Model
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace NEW_DESIGH.Model
 {
     public class Sale
     {

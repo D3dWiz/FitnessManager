@@ -1,33 +1,29 @@
-﻿using System;
+﻿using NEW_DESIGH.Model;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
-using GetInForm.Model;
 
-namespace GetInForm.Presentation
+namespace NEW_DESIGH
 {
     public partial class MembersForm : Form
     {
         // private MemberBusiness MemberBusiness = new MemberBusiness();
         private MemberDbContext PersonDbContext = new MemberDbContext();
-
         private void Members_Load(object sender, EventArgs e)
         {
             textBox1.Text = "";
         }
-
         public MembersForm()
         {
             InitializeComponent();
-            foreach (var member in PersonDbContext.MemberInfos)
-            {
-                listBox1.Items.Add($"{member.MemberInfoId}");
-                listBox3.Items.Add($"{member.FirstName} {member.SecondName} {member.ThirdName}");
-            }
-            foreach (var member in PersonDbContext.Members)
-            {
-                listBox2.Items.Add($"{(member.DateExpiration - DateTime.Now).Days}");
-            }
+            UpdateMembers();
         }
 
+        
         /// <summary>
         /// Search member by card id
         /// </summary>
@@ -35,15 +31,12 @@ namespace GetInForm.Presentation
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            //TODO fix bug
             int cardId = int.Parse(textBox1.Text);
             Member member = PersonDbContext.Members.Find(cardId);
 
             if (member != null)
             {
-                listBox1.SelectedIndex = cardId;
-                listBox2.SelectedIndex = cardId;
-                listBox3.SelectedIndex = cardId;
+                listBox4.SelectedIndex = cardId - 1;
             }
             else
             {
@@ -56,20 +49,22 @@ namespace GetInForm.Presentation
         /// <summary>
         /// Update the list when a new member is added
         /// </summary>
-        public void UpdateMembers()
+        public void UpdateMembers() 
         {
-            listBox1.Items.Clear();
-            listBox2.Items.Clear();
-            listBox3.Items.Clear();
-
             foreach (var member in PersonDbContext.MemberInfos)
             {
-                listBox1.Items.Add($"{member.MemberInfoId}");
-                listBox3.Items.Add($"{member.FirstName} {member.SecondName} {member.ThirdName}");
+                string id = $"{member.MemberInfoId}";
+                string fullName = $"{member.FirstName} {member.SecondName} {member.ThirdName}";
+
+                string line = $"{id}{new String(' ', 14 - id.Length)}{fullName}{new String(' ', 57 - fullName.Length)}";
+                listBox4.Items.Add(line);
             }
+            int index = 0;
             foreach (var member in PersonDbContext.Members)
             {
-                listBox2.Items.Add($"{(member.DateExpiration - DateTime.Now).Days}");
+                string daysLeft = $"{(member.DateExpiration - DateTime.Now).Days}";
+                listBox4.Items[index] += daysLeft;
+                index++;
             }
         }
 

@@ -1,21 +1,23 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using GetInForm.Display;
 
-namespace GetInForm
+namespace NEW_DESIGH
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        private static void Main()
+        static void Main()
         {
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Form1());
         }
     }
 }

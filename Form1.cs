@@ -1,30 +1,39 @@
-﻿using System;
+﻿using NEW_DESIGH.Model;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using GetInForm.Model;
 
-namespace GetInForm.Presentation
+namespace NEW_DESIGH
 {
-    public partial class MainForm : Form
+    public partial class Form1 : Form
     {
-        public MainForm()
+        public Form1()
         {
             InitializeComponent();
         }
 
         public MemberDbContext memberDbContext = new MemberDbContext();
+     //  public ProductDbContext productDbContext = new ProductDbContext();
+        PaymentForm PaymentForm;
+        AddMemberForm AddMemberForm;
+        MembersForm MembersForm;
+        bool choosedItem = true;
+        int quantity = 1;
+        double price = 0.00, currentPrice = 0.00, totalPrice = 0.00, cashMoney = 0.00;
+        string subscribtionPeriod = "";
+       
 
-        //  public ProductDbContext productDbContext = new ProductDbContext();
-        private PaymentForm PaymentForm;
-
-        private AddMemberForm AddMemberForm;
-        private MembersForm MembersForm;
-        private bool choosedItem = true;
-        private int quantity = 1;
-        private double price = 0.00, currentPrice = 0.00, totalPrice = 0.00;
-        private string subscribtionPeriod = "";
-
-        private void MainForm_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
+            panel4.Visible = false;
+            panel2.Visible = true;
+
             AddMemberForm = new AddMemberForm();
             MembersForm = new MembersForm();
             PaymentForm = new PaymentForm();
@@ -44,15 +53,19 @@ namespace GetInForm.Presentation
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             MembersForm.Visible = false;
+            panel4.Visible = false;
+            panel2.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            MembersForm.WindowState = FormWindowState.Minimized;
             this.WindowState = FormWindowState.Minimized;
         }
 
@@ -90,8 +103,8 @@ namespace GetInForm.Presentation
 
                 currentPrice = price * quantity;
             }
+            
         }
-
         /// <summary>
         /// Add item to the list
         /// </summary>
@@ -100,11 +113,11 @@ namespace GetInForm.Presentation
         private void button5_Click(object sender, EventArgs e)
         {
             totalPrice += currentPrice;
-            label4.Text = $"$ {totalPrice}";
+            label4.Text = $"$ {totalPrice:f2}";
 
             listBox2.Items.Add(listBox1.Items[0]);
             listBox4.Items.Add(listBox3.Items[0]);
-            listBox5.Items.Add($"$ {currentPrice}");
+            listBox5.Items.Add($"$ {currentPrice:f2}");
 
             listBox1.Items.Clear();
             listBox3.Items.Clear();
@@ -124,7 +137,7 @@ namespace GetInForm.Presentation
         }
 
         /// <summary>
-        /// Remove the selected item
+        /// Remove the selected item 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -142,6 +155,7 @@ namespace GetInForm.Presentation
                 button6.Enabled = false;
                 quantity = 1;
                 price = 0.00;
+
 
                 //int index = comboBox1.SelectedIndex;
                 //comboBox1.Items[index] = "Products";
@@ -169,6 +183,7 @@ namespace GetInForm.Presentation
                 price = 3.00;
                 currentPrice = price * quantity;
             }
+
         }
 
         /// <summary>
@@ -202,6 +217,8 @@ namespace GetInForm.Presentation
         private void button2_Click(object sender, EventArgs e)
         {
             MembersForm.Visible = true;
+            panel4.Visible = true;
+            panel2.Visible = false;
         }
 
         /// <summary>
@@ -212,23 +229,27 @@ namespace GetInForm.Presentation
         private void button8_Click(object sender, EventArgs e)
         {
             AddMemberForm.ShowDialog();
-            button9.Enabled = true;
-            button11.Enabled = true;
 
             if (AddMemberForm.add)
             {
+                button9.Enabled = true;
+                button11.Enabled = true;
+
+                subscribtionPeriod = AddMemberForm.subscribtionPeriod;
                 price = AddMemberForm.cardPrice;
                 totalPrice += price;
-                label4.Text = $"$ {totalPrice}";
+                label4.Text = $"$ {totalPrice:f2}";
 
                 listBox2.Items.Add($"{subscribtionPeriod} subscribtion");
                 listBox4.Items.Add("x 1");
-                listBox5.Items.Add($"$ {price}");
+                listBox5.Items.Add($"$ {price:f2}");
             }
+            
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -251,8 +272,8 @@ namespace GetInForm.Presentation
 
         private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-        }
 
+        }
         /// <summary>
         /// Open the PaymentForm
         /// </summary>
@@ -261,11 +282,21 @@ namespace GetInForm.Presentation
         private void button9_Click(object sender, EventArgs e)
         {
             PaymentForm.ShowDialog();
-            double cashMoney = PaymentForm.cash;
-            label5.Text = $"$ {cashMoney}";
-            label6.Text = $"$ {cashMoney - totalPrice}";
+            cashMoney += PaymentForm.cash;
 
-            button10.Enabled = true;
+            if (cashMoney < totalPrice)
+            {
+                label5.Text = $"$ {cashMoney:f2}";
+                MessageBox.Show($"You need $ {Math.Abs(cashMoney - totalPrice):f2}, to complete the order!", "Not enough money!");
+            }
+            else
+            {
+                label5.Text = $"$ {cashMoney:f2}";
+                label6.Text = $"$ {cashMoney - totalPrice:f2}";
+
+                button10.Enabled = true;
+            }
+            
         }
 
         /// <summary>
@@ -290,8 +321,8 @@ namespace GetInForm.Presentation
                 memberDbContext.Members.Add(
                         new Member()
                         {
-                            //Id = 0,
-                            MemberInfoId = memberInfo,
+                        //Id = 0,
+                        MemberInfoId = memberInfo,
                             DateRegistrated = DateTime.Now,
                             DateExpiration = AddMemberForm.period
                         }
@@ -300,6 +331,7 @@ namespace GetInForm.Presentation
                 memberDbContext.SaveChanges();
 
                 MembersForm.UpdateMembers();
+                cashMoney = 0;
             }
 
             listBox2.Items.Clear();
@@ -317,6 +349,8 @@ namespace GetInForm.Presentation
             button10.Enabled = false;
             button11.Enabled = false;
 
+
+
             //for (int i = 0; i < listBox4.Items.Count; i++)
             //{
             //    string productSale = listBox2.Items[i].ToString();
@@ -332,7 +366,7 @@ namespace GetInForm.Presentation
             //    sale.Quantity = quantitySale;
             //    sale.Total = totalSale;
 
-            //    memberDbContext.Sales.Add(sale);
+            //    memberDbContext.Sales.Add(sale); 
 
             //    memberDbContext.SaveChanges();
             //}
@@ -340,6 +374,7 @@ namespace GetInForm.Presentation
 
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
+         
         }
 
         private void comboBox1_Leave(object sender, EventArgs e)
@@ -348,10 +383,12 @@ namespace GetInForm.Presentation
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
+
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+
         }
     }
 }

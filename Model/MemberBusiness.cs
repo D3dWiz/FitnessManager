@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace GetInForm.Model
+namespace NEW_DESIGH.Model
 {
-    internal class MemberBusiness
+    class MemberBusiness
     {
         private MemberDbContext personDbContext;
 

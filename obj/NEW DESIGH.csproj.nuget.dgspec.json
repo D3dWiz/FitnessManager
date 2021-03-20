@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj": {}
+    "G:\\Desktop\\NEW DESIGH - Copy\\NEW DESIGH\\NEW DESIGH.csproj": {}
   },
   "projects": {
-    "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj": {
+    "G:\\Desktop\\NEW DESIGH - Copy\\NEW DESIGH\\NEW DESIGH.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj",
+        "projectUniqueName": "G:\\Desktop\\NEW DESIGH - Copy\\NEW DESIGH\\NEW DESIGH.csproj",
         "projectName": "NEW DESIGH",
-        "projectPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj",
-        "packagesPath": "C:\\Users\\d3dpr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\obj\\",
+        "projectPath": "G:\\Desktop\\NEW DESIGH - Copy\\NEW DESIGH\\NEW DESIGH.csproj",
+        "packagesPath": "C:\\Users\\daa19\\.nuget\\packages\\",
+        "outputPath": "G:\\Desktop\\NEW DESIGH - Copy\\NEW DESIGH\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\d3dpr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\daa19\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,12 +22,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -39,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -74,7 +71,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

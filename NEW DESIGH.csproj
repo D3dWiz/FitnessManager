@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>GetInForm</RootNamespace>
+    <RootNamespace>NEW_DESIGH</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 

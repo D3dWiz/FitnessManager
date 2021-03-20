@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace GetInForm.Model
+namespace NEW_DESIGH.Model
 {
     public class MemberInfo
     {
@@ -33,21 +33,20 @@ namespace GetInForm.Model
             get { return thirdName; }
             set { thirdName = value; }
         }
-
         public int Age
         {
             get { return age; }
             set { age = value; }
         }
 
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
+        //public override string ToString()
+        //{
+        //    StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Name: {this.FirstName} {this.SecondName} {this.ThirdName}");
-            sb.Append($"Age: {this.Age}");
+        //    sb.AppendLine($"Name: {this.FirstName} {this.SecondName} {this.ThirdName}");
+        //    sb.Append($"Age: {this.Age}");
 
-            return sb.ToString();
-        }
+        //    return sb.ToString();
+        //}
     }
 }

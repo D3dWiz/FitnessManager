@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace GetInForm.Model
+namespace NEW_DESIGH.Model
 {
     public class Member
     {
@@ -34,19 +34,19 @@ namespace GetInForm.Model
             set { dateExpiration = value; }
         }
 
-        private MemberDbContext personDbContext = new MemberDbContext();
+        MemberDbContext personDbContext = new MemberDbContext();
 
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
+        //public override string ToString()
+        //{
+        //    StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Card id: { this.MemberId}");
-            sb.AppendLine(personDbContext.MemberInfos.Find(this.MemberId).ToString());
+        //    sb.AppendLine($"Card id: { this.MemberId}");
+        //    sb.AppendLine(personDbContext.MemberInfos.Find(this.MemberId).ToString());
 
-            var daysLeft = (this.DateExpiration - DateTime.Now).Days;
-            sb.AppendLine($"Days left: {daysLeft}");
+        //    var daysLeft = (this.DateExpiration - DateTime.Now).Days;
+        //    sb.AppendLine($"Days left: {daysLeft}");
 
-            return sb.ToString();
-        }
+        //    return sb.ToString();
+        //}
     }
 }
