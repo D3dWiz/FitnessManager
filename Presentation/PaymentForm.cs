@@ -9,12 +9,13 @@ namespace NEW_DESIGH
         {
             InitializeComponent();
         }
+
         public double cash = 0.00;
 
         private void button1_Click(object sender, EventArgs e)
         {
             cash = double.Parse(textBox1.Text);
-            
+
             this.Visible = false;
             textBox1.Clear();
             label2.Text = $"$ 0:00";
@@ -39,7 +40,6 @@ namespace NEW_DESIGH
 
         private void PaymentForm_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

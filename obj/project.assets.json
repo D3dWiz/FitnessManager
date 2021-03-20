@@ -5762,19 +5762,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\daa19\\.nuget\\packages\\": {}
+    "C:\\Users\\nasio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Desktop\\NEW DESIGH - Copy\\NEW DESIGH\\NEW DESIGH.csproj",
+      "projectUniqueName": "C:\\Users\\nasio\\Documents\\GitHub\\FitnessManager\\NEW DESIGH.csproj",
       "projectName": "NEW DESIGH",
-      "projectPath": "G:\\Desktop\\NEW DESIGH - Copy\\NEW DESIGH\\NEW DESIGH.csproj",
-      "packagesPath": "C:\\Users\\daa19\\.nuget\\packages\\",
-      "outputPath": "G:\\Desktop\\NEW DESIGH - Copy\\NEW DESIGH\\obj\\",
+      "projectPath": "C:\\Users\\nasio\\Documents\\GitHub\\FitnessManager\\NEW DESIGH.csproj",
+      "packagesPath": "C:\\Users\\nasio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nasio\\Documents\\GitHub\\FitnessManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\daa19\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nasio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5786,6 +5786,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -5797,6 +5798,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -5831,7 +5833,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

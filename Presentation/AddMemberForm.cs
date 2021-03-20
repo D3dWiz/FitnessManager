@@ -1,10 +1,4 @@
-﻿using NEW_DESIGH.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using System;
 using System.Windows.Forms;
 
 namespace NEW_DESIGH
@@ -15,7 +9,8 @@ namespace NEW_DESIGH
         {
             InitializeComponent();
         }
-        Form1 mainForm;
+
+        private Form1 mainForm;
 
         public bool add = false;
         public string firstName = "", secondName = "", thirdName = "", subscribtionPeriod = "";
@@ -92,14 +87,11 @@ namespace NEW_DESIGH
                     case 4: period = period.AddYears(2); cardPrice = 900.00; break;
                 }
 
-
                 //MemberInfo memberInfo = new MemberInfo();
                 //memberInfo.FirstName = firstName;
                 //memberInfo.SecondName = secondName;
                 //memberInfo.ThirdName = thirdName;
                 //memberInfo.Age = age;
-
-
 
                 //mainForm.memberDbContext.MemberInfos.Add(memberInfo);
 
@@ -156,6 +148,7 @@ namespace NEW_DESIGH
 
             listBox1.SelectedItem = null;
         }
+
         /// <summary>
         /// Validation - allow only digits for the age textBox
         /// </summary>

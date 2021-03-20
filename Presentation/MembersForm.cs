@@ -1,10 +1,5 @@
 ﻿using NEW_DESIGH.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace NEW_DESIGH
@@ -13,17 +8,18 @@ namespace NEW_DESIGH
     {
         // private MemberBusiness MemberBusiness = new MemberBusiness();
         private MemberDbContext PersonDbContext = new MemberDbContext();
+
         private void Members_Load(object sender, EventArgs e)
         {
             textBox1.Text = "";
         }
+
         public MembersForm()
         {
             InitializeComponent();
             UpdateMembers();
         }
 
-        
         /// <summary>
         /// Search member by card id
         /// </summary>
@@ -49,7 +45,7 @@ namespace NEW_DESIGH
         /// <summary>
         /// Update the list when a new member is added
         /// </summary>
-        public void UpdateMembers() 
+        public void UpdateMembers()
         {
             foreach (var member in PersonDbContext.MemberInfos)
             {

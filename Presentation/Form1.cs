@@ -1,12 +1,5 @@
 ﻿using NEW_DESIGH.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NEW_DESIGH
@@ -19,15 +12,16 @@ namespace NEW_DESIGH
         }
 
         public MemberDbContext memberDbContext = new MemberDbContext();
-     //  public ProductDbContext productDbContext = new ProductDbContext();
-        PaymentForm PaymentForm;
-        AddMemberForm AddMemberForm;
-        MembersForm MembersForm;
-        bool choosedItem = true;
-        int quantity = 1;
-        double price = 0.00, currentPrice = 0.00, totalPrice = 0.00, cashMoney = 0.00;
-        string subscribtionPeriod = "";
-       
+
+        //  public ProductDbContext productDbContext = new ProductDbContext();
+        private PaymentForm PaymentForm;
+
+        private AddMemberForm AddMemberForm;
+        private MembersForm MembersForm;
+        private bool choosedItem = true;
+        private int quantity = 1;
+        private double price = 0.00, currentPrice = 0.00, totalPrice = 0.00, cashMoney = 0.00;
+        private string subscribtionPeriod = "";
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -53,7 +47,6 @@ namespace NEW_DESIGH
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,8 +96,8 @@ namespace NEW_DESIGH
 
                 currentPrice = price * quantity;
             }
-            
         }
+
         /// <summary>
         /// Add item to the list
         /// </summary>
@@ -137,7 +130,7 @@ namespace NEW_DESIGH
         }
 
         /// <summary>
-        /// Remove the selected item 
+        /// Remove the selected item
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -155,7 +148,6 @@ namespace NEW_DESIGH
                 button6.Enabled = false;
                 quantity = 1;
                 price = 0.00;
-
 
                 //int index = comboBox1.SelectedIndex;
                 //comboBox1.Items[index] = "Products";
@@ -183,7 +175,6 @@ namespace NEW_DESIGH
                 price = 3.00;
                 currentPrice = price * quantity;
             }
-
         }
 
         /// <summary>
@@ -244,12 +235,10 @@ namespace NEW_DESIGH
                 listBox4.Items.Add("x 1");
                 listBox5.Items.Add($"$ {price:f2}");
             }
-            
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -272,8 +261,8 @@ namespace NEW_DESIGH
 
         private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
+
         /// <summary>
         /// Open the PaymentForm
         /// </summary>
@@ -296,7 +285,6 @@ namespace NEW_DESIGH
 
                 button10.Enabled = true;
             }
-            
         }
 
         /// <summary>
@@ -321,8 +309,8 @@ namespace NEW_DESIGH
                 memberDbContext.Members.Add(
                         new Member()
                         {
-                        //Id = 0,
-                        MemberInfoId = memberInfo,
+                            //Id = 0,
+                            MemberInfoId = memberInfo,
                             DateRegistrated = DateTime.Now,
                             DateExpiration = AddMemberForm.period
                         }
@@ -349,8 +337,6 @@ namespace NEW_DESIGH
             button10.Enabled = false;
             button11.Enabled = false;
 
-
-
             //for (int i = 0; i < listBox4.Items.Count; i++)
             //{
             //    string productSale = listBox2.Items[i].ToString();
@@ -366,7 +352,7 @@ namespace NEW_DESIGH
             //    sale.Quantity = quantitySale;
             //    sale.Total = totalSale;
 
-            //    memberDbContext.Sales.Add(sale); 
+            //    memberDbContext.Sales.Add(sale);
 
             //    memberDbContext.SaveChanges();
             //}
@@ -374,7 +360,6 @@ namespace NEW_DESIGH
 
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
-         
         }
 
         private void comboBox1_Leave(object sender, EventArgs e)
@@ -383,12 +368,10 @@ namespace NEW_DESIGH
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
