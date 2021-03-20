@@ -9,7 +9,8 @@ namespace GetInForm
         {
             InitializeComponent();
         }
-        Form1 mainForm;
+
+        private Form1 mainForm;
 
         public bool add = false;
         public string firstName = "", secondName = "", thirdName = "", subscribtionPeriod = "";
@@ -86,14 +87,11 @@ namespace GetInForm
                     case 4: period = period.AddYears(2); cardPrice = 900.00; break;
                 }
 
-
                 //MemberInfo memberInfo = new MemberInfo();
                 //memberInfo.FirstName = firstName;
                 //memberInfo.SecondName = secondName;
                 //memberInfo.ThirdName = thirdName;
                 //memberInfo.Age = age;
-
-
 
                 //mainForm.memberDbContext.MemberInfos.Add(memberInfo);
 
@@ -150,6 +148,7 @@ namespace GetInForm
 
             listBox1.SelectedItem = null;
         }
+
         /// <summary>
         /// Validation - allow only digits for the age textBox
         /// </summary>

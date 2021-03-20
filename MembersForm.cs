@@ -1,6 +1,6 @@
-﻿using System;
+﻿using GetInForm.Model;
+using System;
 using System.Windows.Forms;
-using GetInForm.Model;
 
 namespace GetInForm
 {
@@ -8,10 +8,12 @@ namespace GetInForm
     {
         // private MemberBusiness MemberBusiness = new MemberBusiness();
         private MemberDbContext PersonDbContext = new MemberDbContext();
+
         private void Members_Load(object sender, EventArgs e)
         {
             textBox1.Text = "";
         }
+
         public MembersForm()
         {
             InitializeComponent();
@@ -26,7 +28,6 @@ namespace GetInForm
             }
         }
 
-        
         /// <summary>
         /// Search member by card id
         /// </summary>
@@ -55,7 +56,7 @@ namespace GetInForm
         /// <summary>
         /// Update the list when a new member is added
         /// </summary>
-        public void UpdateMembers() 
+        public void UpdateMembers()
         {
             listBox1.Items.Clear();
             listBox2.Items.Clear();
@@ -79,6 +80,6 @@ namespace GetInForm
                 MessageBox.Show("Please enter only numbers.");
                 textBox1.Clear();
             }
-        }        
+        }
     }
 }

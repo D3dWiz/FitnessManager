@@ -34,7 +34,7 @@ namespace GetInForm.Model
             set { dateExpiration = value; }
         }
 
-        MemberDbContext personDbContext = new MemberDbContext();
+        private MemberDbContext personDbContext = new MemberDbContext();
 
         public override string ToString()
         {

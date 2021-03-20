@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace GetInForm.Model
 {
-    class MemberBusiness
+    internal class MemberBusiness
     {
         private MemberDbContext personDbContext;
 
