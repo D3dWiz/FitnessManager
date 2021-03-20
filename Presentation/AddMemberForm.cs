@@ -69,7 +69,6 @@ namespace NEW_DESIGH
             else
             {
                 add = true;
-
                 firstName = textBox1.Text;
                 secondName = textBox2.Text;
                 thirdName = textBox3.Text;
@@ -86,27 +85,6 @@ namespace NEW_DESIGH
                     case 3: period = period.AddYears(1); cardPrice = 500.00; break;
                     case 4: period = period.AddYears(2); cardPrice = 900.00; break;
                 }
-
-                //MemberInfo memberInfo = new MemberInfo();
-                //memberInfo.FirstName = firstName;
-                //memberInfo.SecondName = secondName;
-                //memberInfo.ThirdName = thirdName;
-                //memberInfo.Age = age;
-
-                //mainForm.memberDbContext.MemberInfos.Add(memberInfo);
-
-                //mainForm.memberDbContext.Members.Add(
-                //        new Member()
-                //        {
-                //            //Id = 0,
-                //            MemberInfoId = memberInfo,
-                //            DateRegistrated = DateTime.Now,
-                //            DateExpiration = period
-                //        }
-                //    );
-
-                //mainForm.memberDbContext.SaveChanges();
-
                 ClearForm();
                 Visible = false;
             }

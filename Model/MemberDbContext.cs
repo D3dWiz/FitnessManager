@@ -6,7 +6,6 @@ namespace NEW_DESIGH.Model
     {
         private DbSet<MemberInfo> memberInfos;
         private DbSet<Member> members;
-        private DbSet<Sale> sales;
 
         public DbSet<MemberInfo> MemberInfos
         {
@@ -18,12 +17,6 @@ namespace NEW_DESIGH.Model
         {
             get { return members; }
             set { members = value; }
-        }
-
-        public DbSet<Sale> Sales
-        {
-            get { return sales; }
-            set { sales = value; }
         }
 
         public MemberDbContext()

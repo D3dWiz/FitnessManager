@@ -13,7 +13,6 @@ namespace NEW_DESIGH
 
         public MemberDbContext memberDbContext = new MemberDbContext();
 
-        //  public ProductDbContext productDbContext = new ProductDbContext();
         private PaymentForm PaymentForm;
 
         private AddMemberForm AddMemberForm;
@@ -23,6 +22,11 @@ namespace NEW_DESIGH
         private double price = 0.00, currentPrice = 0.00, totalPrice = 0.00, cashMoney = 0.00;
         private string subscribtionPeriod = "";
 
+        /// <summary>
+        /// Configure the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             panel4.Visible = false;
@@ -32,7 +36,6 @@ namespace NEW_DESIGH
             MembersForm = new MembersForm();
             PaymentForm = new PaymentForm();
 
-            // panel4.BackColor = DefaultBackColor;
             textBox1.Enabled = false;
             button5.Enabled = false;
             button6.Enabled = false;
@@ -48,25 +51,41 @@ namespace NEW_DESIGH
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
         }
-
+        /// <summary>
+        /// Configure the form when button1 is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             MembersForm.Visible = false;
             panel4.Visible = false;
             panel2.Visible = true;
         }
-
+        /// <summary>
+        /// Minimize the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             MembersForm.WindowState = FormWindowState.Minimized;
             this.WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Exit the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Configure the list and show selected products in the list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = comboBox1.SelectedIndex;
@@ -240,7 +259,11 @@ namespace NEW_DESIGH
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
         }
-
+        /// <summary>
+        /// Validate the textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             // validation - enter only numbers
@@ -336,26 +359,6 @@ namespace NEW_DESIGH
             button9.Enabled = false;
             button10.Enabled = false;
             button11.Enabled = false;
-
-            //for (int i = 0; i < listBox4.Items.Count; i++)
-            //{
-            //    string productSale = listBox2.Items[i].ToString();
-
-            //    string qSale = listBox4.Items[i].ToString();
-            //    int quantitySale = int.Parse(qSale.Split(' ')[1].ToString());
-
-            //    string tSale = listBox5.Items[i].ToString();
-            //    double totalSale = double.Parse(tSale.Split(' ')[1].ToString());
-
-            //    Sale sale = new Sale();
-            //    sale.Product = productSale;
-            //    sale.Quantity = quantitySale;
-            //    sale.Total = totalSale;
-
-            //    memberDbContext.Sales.Add(sale);
-
-            //    memberDbContext.SaveChanges();
-            //}
         }
 
         private void comboBox1_DropDownClosed(object sender, EventArgs e)

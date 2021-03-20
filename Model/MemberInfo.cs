@@ -37,15 +37,5 @@
             get { return age; }
             set { age = value; }
         }
-
-        //public override string ToString()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-
-        //    sb.AppendLine($"Name: {this.FirstName} {this.SecondName} {this.ThirdName}");
-        //    sb.Append($"Age: {this.Age}");
-
-        //    return sb.ToString();
-        //}
     }
 }

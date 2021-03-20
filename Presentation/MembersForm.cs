@@ -6,7 +6,6 @@ namespace NEW_DESIGH
 {
     public partial class MembersForm : Form
     {
-        // private MemberBusiness MemberBusiness = new MemberBusiness();
         private MemberDbContext PersonDbContext = new MemberDbContext();
 
         private void Members_Load(object sender, EventArgs e)
@@ -63,7 +62,11 @@ namespace NEW_DESIGH
                 index++;
             }
         }
-
+        /// <summary>
+        /// Validate the textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, "[^0-9]"))
