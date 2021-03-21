@@ -6,6 +6,7 @@ namespace FitnessManager.Presentation
 {
     public partial class PaymentForm : Form
     {
+        public bool madePayment = false;
         public double cash;
 
         public PaymentForm()
@@ -21,10 +22,17 @@ namespace FitnessManager.Presentation
         private void button1_Click(object sender, EventArgs e)
         {
             cash = double.Parse(textBox1.Text);
-
-            Visible = false;
-            textBox1.Clear();
-            label2.Text = "$ 0.00";
+            if (cash > 0.00)
+            {
+                madePayment = true;
+                this.Visible = false;
+                textBox1.Clear();
+                label2.Text = $"$ {cash:f2}";
+            }
+            else
+            {
+                MessageBox.Show("You are trying to pay with no money!", "Erorr!");
+            }
         }
 
         /// <summary>
@@ -50,9 +58,10 @@ namespace FitnessManager.Presentation
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            Visible = false;
+            madePayment = false;
+            this.Visible = false;
             textBox1.Clear();
-            label2.Text = "$ 0.00";
+            label2.Text = $"$ 0:00";
         }
 
         private void PaymentForm_Load(object sender, EventArgs e)

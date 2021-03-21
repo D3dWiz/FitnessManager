@@ -210,6 +210,7 @@ namespace FitnessManager.Presentation
 
             currentPrice = 0.00;
             totalPrice = 0.00;
+            cashMoney = 0.00;
 
             button9.Enabled = false;
             button10.Enabled = false;
@@ -293,20 +294,22 @@ namespace FitnessManager.Presentation
         private void button9_Click(object sender, EventArgs e)
         {
             PaymentForm.ShowDialog();
-            cashMoney += PaymentForm.cash;
-
-            if (cashMoney < totalPrice)
+            if (PaymentForm.madePayment)
             {
-                label5.Text = $"$ {cashMoney:f2}";
-                MessageBox.Show($"You need $ {Math.Abs(cashMoney - totalPrice):f2}, to complete the order!",
-                    "Not enough money!");
-            }
-            else
-            {
-                label5.Text = $"$ {cashMoney:f2}";
-                label6.Text = $"$ {cashMoney - totalPrice:f2}";
+                cashMoney += PaymentForm.cash;
+                if (cashMoney < totalPrice)
+                {
+                    label5.Text = $"$ {cashMoney:f2}";
+                    MessageBox.Show($"You need $ {Math.Abs(cashMoney - totalPrice):f2}, to complete the order!", "Not enough money!");
+                }
+                else
+                {
+                    label5.Text = $"$ {cashMoney:f2}";
+                    label6.Text = $"$ {cashMoney - totalPrice:f2}";
 
-                button10.Enabled = true;
+                    button9.Enabled = false;
+                    button10.Enabled = true;
+                }
             }
         }
 
@@ -355,6 +358,7 @@ namespace FitnessManager.Presentation
 
             currentPrice = 0.00;
             totalPrice = 0.00;
+            cashMoney = 0.00;
 
             button9.Enabled = false;
             button10.Enabled = false;

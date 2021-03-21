@@ -15,7 +15,7 @@ namespace FitnessManager.Model
         public DbSet<Member> Members { get; set; }
 
         /// <summary>
-        ///     Конфигуриране на контекста
+        /// Configure the context
         /// </summary>
         /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
