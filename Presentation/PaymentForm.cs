@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace NEW_DESIGH
+namespace FitnessManager.Presentation
 {
     public partial class PaymentForm : Form
     {
@@ -11,6 +11,7 @@ namespace NEW_DESIGH
         }
 
         public double cash = 0.00;
+
         /// <summary>
         /// Confirm payment and reset the form
         /// </summary>
@@ -24,6 +25,7 @@ namespace NEW_DESIGH
             textBox1.Clear();
             label2.Text = $"$ 0:00";
         }
+
         /// <summary>
         /// Validate the textbox
         /// </summary>
@@ -38,6 +40,7 @@ namespace NEW_DESIGH
             }
             label2.Text = $"$ {cash:f2}";
         }
+
         /// <summary>
         /// Close the form
         /// </summary>

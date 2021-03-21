@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace NEW_DESIGH.Model
+namespace FitnessManager.Model
 {
     public class Member
     {
         private int memberId;
         private MemberInfo memberInfoId;
-        private DateTime dateRegistrated;
+        private DateTime dateRegistered;
         private DateTime dateExpiration;
 
         public int MemberId
@@ -21,10 +21,10 @@ namespace NEW_DESIGH.Model
             set { memberInfoId = value; }
         }
 
-        public DateTime DateRegistrated
+        public DateTime DateRegistered
         {
-            get { return dateRegistrated; }
-            set { dateRegistrated = value; }
+            get { return dateRegistered; }
+            set { dateRegistered = value; }
         }
 
         public DateTime DateExpiration

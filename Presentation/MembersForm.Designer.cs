@@ -1,4 +1,4 @@
-﻿namespace NEW_DESIGH
+﻿namespace FitnessManager.Presentation
 {
     partial class MembersForm
     {

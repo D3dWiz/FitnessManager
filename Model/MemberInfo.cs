@@ -1,4 +1,4 @@
-﻿namespace NEW_DESIGH.Model
+﻿namespace FitnessManager.Model
 {
     public class MemberInfo
     {

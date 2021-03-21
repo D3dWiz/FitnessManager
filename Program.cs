@@ -1,7 +1,8 @@
 using System;
 using System.Windows.Forms;
+using FitnessManager.Presentation;
 
-namespace NEW_DESIGH
+namespace FitnessManager
 {
     internal static class Program
     {

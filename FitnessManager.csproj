@@ -3,8 +3,9 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>NEW_DESIGH</RootNamespace>
+    <RootNamespace>FitnessManager</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>FitnessManager</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

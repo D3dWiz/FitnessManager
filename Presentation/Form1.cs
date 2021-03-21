@@ -1,8 +1,8 @@
-﻿using NEW_DESIGH.Model;
+﻿using FitnessManager.Model;
 using System;
 using System.Windows.Forms;
 
-namespace NEW_DESIGH
+namespace FitnessManager.Presentation
 {
     public partial class Form1 : Form
     {
@@ -51,6 +51,7 @@ namespace NEW_DESIGH
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
         }
+
         /// <summary>
         /// Configure the form when button1 is clicked
         /// </summary>
@@ -62,6 +63,7 @@ namespace NEW_DESIGH
             panel4.Visible = false;
             panel2.Visible = true;
         }
+
         /// <summary>
         /// Minimize the form
         /// </summary>
@@ -72,6 +74,7 @@ namespace NEW_DESIGH
             MembersForm.WindowState = FormWindowState.Minimized;
             this.WindowState = FormWindowState.Minimized;
         }
+
         /// <summary>
         /// Exit the form
         /// </summary>
@@ -81,6 +84,7 @@ namespace NEW_DESIGH
         {
             Application.Exit();
         }
+
         /// <summary>
         /// Configure the list and show selected products in the list
         /// </summary>
@@ -259,6 +263,7 @@ namespace NEW_DESIGH
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
         }
+
         /// <summary>
         /// Validate the textbox
         /// </summary>
@@ -334,7 +339,7 @@ namespace NEW_DESIGH
                         {
                             //Id = 0,
                             MemberInfoId = memberInfo,
-                            DateRegistrated = DateTime.Now,
+                            DateRegistered = DateTime.Now,
                             DateExpiration = AddMemberForm.period
                         }
                     );

@@ -1,8 +1,8 @@
-﻿using NEW_DESIGH.Model;
+﻿using FitnessManager.Model;
 using System;
 using System.Windows.Forms;
 
-namespace NEW_DESIGH
+namespace FitnessManager.Presentation
 {
     public partial class MembersForm : Form
     {
@@ -62,6 +62,7 @@ namespace NEW_DESIGH
                 index++;
             }
         }
+
         /// <summary>
         /// Validate the textbox
         /// </summary>

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj": {}
+    "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj": {
+    "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj",
+        "projectUniqueName": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj",
         "projectName": "FitnessManager",
-        "projectPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj",
+        "projectPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj",
         "packagesPath": "C:\\Users\\d3dpr\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace NEW_DESIGH
+namespace FitnessManager.Presentation
 {
     public partial class AddMemberForm : Form
     {

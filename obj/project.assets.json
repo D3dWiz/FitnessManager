@@ -5762,23 +5762,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\denis\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\d3dpr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\denis\\OneDrive\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj",
-      "projectName": "NEW DESIGH",
-      "projectPath": "C:\\Users\\denis\\OneDrive\\Documents\\GitHub\\GetInForm\\NEW DESIGH.csproj",
-      "packagesPath": "C:\\Users\\denis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\denis\\OneDrive\\Documents\\GitHub\\GetInForm\\obj\\",
+      "projectUniqueName": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj",
+      "projectName": "FitnessManager",
+      "projectPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj",
+      "packagesPath": "C:\\Users\\d3dpr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\denis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\d3dpr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5786,7 +5782,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://packagesource": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
