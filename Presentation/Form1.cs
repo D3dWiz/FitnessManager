@@ -1,29 +1,31 @@
-﻿using FitnessManager.Model;
-using System;
+﻿using System;
+using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using FitnessManager.Model;
 
 namespace FitnessManager.Presentation
 {
     public partial class Form1 : Form
     {
+        private AddMemberForm AddMemberForm;
+        private bool choosedItem = true;
+
+        public MemberDbContext memberDbContext = new MemberDbContext();
+        private MembersForm MembersForm;
+
+        private PaymentForm PaymentForm;
+        private double price, currentPrice, totalPrice, cashMoney;
+        private int quantity = 1;
+        private string subscribtionPeriod = "";
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        public MemberDbContext memberDbContext = new MemberDbContext();
-
-        private PaymentForm PaymentForm;
-
-        private AddMemberForm AddMemberForm;
-        private MembersForm MembersForm;
-        private bool choosedItem = true;
-        private int quantity = 1;
-        private double price = 0.00, currentPrice = 0.00, totalPrice = 0.00, cashMoney = 0.00;
-        private string subscribtionPeriod = "";
-
         /// <summary>
-        /// Configure the form
+        ///     Configure the form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -45,7 +47,7 @@ namespace FitnessManager.Presentation
             button11.Enabled = false;
 
             MembersForm.StartPosition = new FormStartPosition();
-            MembersForm.Location = new System.Drawing.Point(this.Location.X, this.Location.Y + 47);
+            MembersForm.Location = new Point(Location.X, Location.Y + 47);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -53,7 +55,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Configure the form when button1 is clicked
+        ///     Configure the form when button1 is clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -65,18 +67,18 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Minimize the form
+        ///     Minimize the form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             MembersForm.WindowState = FormWindowState.Minimized;
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         /// <summary>
-        /// Exit the form
+        ///     Exit the form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -86,14 +88,14 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Configure the list and show selected products in the list
+        ///     Configure the list and show selected products in the list
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = comboBox1.SelectedIndex;
-            string selectedProduct = comboBox1.Items[index].ToString();
+            var index = comboBox1.SelectedIndex;
+            var selectedProduct = comboBox1.Items[index].ToString();
             if (choosedItem)
             {
                 listBox1.Items.Add(selectedProduct);
@@ -104,25 +106,16 @@ namespace FitnessManager.Presentation
                 button6.Enabled = true;
                 choosedItem = false;
 
-                if (index == 0)
-                {
-                    price = 1.00;
-                }
-                if (index == 1)
-                {
-                    price = 2.00;
-                }
-                if (index == 2)
-                {
-                    price = 4.00;
-                }
+                if (index == 0) price = 1.00;
+                if (index == 1) price = 2.00;
+                if (index == 2) price = 4.00;
 
                 currentPrice = price * quantity;
             }
         }
 
         /// <summary>
-        /// Add item to the list
+        ///     Add item to the list
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -153,7 +146,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Remove the selected item
+        ///     Remove the selected item
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -179,7 +172,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Add training to the pre add list
+        ///     Add training to the pre add list
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -201,7 +194,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Clear the prices & added items
+        ///     Clear the prices & added items
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -224,7 +217,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Open Members form
+        ///     Open Members form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -236,7 +229,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Open the form to fill the new member information (member)
+        ///     Open the form to fill the new member information (member)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -265,18 +258,19 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Validate the textbox
+        ///     Validate the textbox
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             // validation - enter only numbers
-            if (System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, "[^0-9]"))
+            if (Regex.IsMatch(textBox1.Text, "[^0-9]"))
             {
                 MessageBox.Show("Please enter only numbers.");
                 textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
             }
+
             if (!choosedItem)
             {
                 quantity = int.Parse(textBox1.Text);
@@ -292,7 +286,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Open the PaymentForm
+        ///     Open the PaymentForm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -304,7 +298,8 @@ namespace FitnessManager.Presentation
             if (cashMoney < totalPrice)
             {
                 label5.Text = $"$ {cashMoney:f2}";
-                MessageBox.Show($"You need $ {Math.Abs(cashMoney - totalPrice):f2}, to complete the order!", "Not enough money!");
+                MessageBox.Show($"You need $ {Math.Abs(cashMoney - totalPrice):f2}, to complete the order!",
+                    "Not enough money!");
             }
             else
             {
@@ -316,7 +311,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Complete payment & if subscribtion is bought add the member to the database
+        ///     Complete payment & if subscribtion is bought add the member to the database
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -326,7 +321,7 @@ namespace FitnessManager.Presentation
             {
                 subscribtionPeriod = AddMemberForm.subscribtionPeriod;
 
-                MemberInfo memberInfo = new MemberInfo();
+                var memberInfo = new MemberInfo();
                 memberInfo.FirstName = AddMemberForm.firstName;
                 memberInfo.SecondName = AddMemberForm.secondName;
                 memberInfo.ThirdName = AddMemberForm.thirdName;
@@ -335,14 +330,14 @@ namespace FitnessManager.Presentation
                 memberDbContext.MemberInfos.Add(memberInfo);
 
                 memberDbContext.Members.Add(
-                        new Member()
-                        {
-                            //Id = 0,
-                            MemberInfoId = memberInfo,
-                            DateRegistered = DateTime.Now,
-                            DateExpiration = AddMemberForm.period
-                        }
-                    );
+                    new Member
+                    {
+                        //Id = 0,
+                        MemberInfoId = memberInfo,
+                        DateRegistered = DateTime.Now,
+                        DateExpiration = AddMemberForm.period
+                    }
+                );
 
                 memberDbContext.SaveChanges();
 

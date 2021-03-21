@@ -1,22 +1,23 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace FitnessManager.Presentation
 {
     public partial class AddMemberForm : Form
     {
+        public bool add;
+        public int age;
+        public double cardPrice;
+        public string firstName = "", secondName = "", thirdName = "", subscribtionPeriod = "";
+
+        private Form1 mainForm;
+        public DateTime period;
+
         public AddMemberForm()
         {
             InitializeComponent();
         }
-
-        private Form1 mainForm;
-
-        public bool add = false;
-        public string firstName = "", secondName = "", thirdName = "", subscribtionPeriod = "";
-        public double cardPrice = 0.00;
-        public int age = 0;
-        public DateTime period;
 
         private void AddMemberForm_Load(object sender, EventArgs e)
         {
@@ -24,7 +25,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Finalize the membership & add the new member
+        ///     Finalize the membership & add the new member
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -72,26 +73,42 @@ namespace FitnessManager.Presentation
                 firstName = textBox1.Text;
                 secondName = textBox2.Text;
                 thirdName = textBox3.Text;
-                age = int.Parse(this.textBox4.Text);
+                age = int.Parse(textBox4.Text);
 
                 period = DateTime.Now;
                 subscribtionPeriod = listBox1.SelectedItem.ToString();
 
                 switch (listBox1.SelectedIndex)
                 {
-                    case 0: period = period.AddMonths(1); cardPrice = 50.00; break;
-                    case 1: period = period.AddMonths(3); cardPrice = 120.00; break;
-                    case 2: period = period.AddMonths(6); cardPrice = 250.00; break;
-                    case 3: period = period.AddYears(1); cardPrice = 500.00; break;
-                    case 4: period = period.AddYears(2); cardPrice = 900.00; break;
+                    case 0:
+                        period = period.AddMonths(1);
+                        cardPrice = 50.00;
+                        break;
+                    case 1:
+                        period = period.AddMonths(3);
+                        cardPrice = 120.00;
+                        break;
+                    case 2:
+                        period = period.AddMonths(6);
+                        cardPrice = 250.00;
+                        break;
+                    case 3:
+                        period = period.AddYears(1);
+                        cardPrice = 500.00;
+                        break;
+                    case 4:
+                        period = period.AddYears(2);
+                        cardPrice = 900.00;
+                        break;
                 }
+
                 ClearForm();
                 Visible = false;
             }
         }
 
         /// <summary>
-        /// Close & clear the form
+        ///     Close & clear the form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -102,7 +119,7 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Clear the form when closed
+        ///     Clear the form when closed
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -112,29 +129,25 @@ namespace FitnessManager.Presentation
         }
 
         /// <summary>
-        /// Clear all textBoxes & disselect the listBox item
+        ///     Clear all textBoxes & disselect the listBox item
         /// </summary>
         private void ClearForm()
         {
-            foreach (var tb in this.Controls)
-            {
+            foreach (var tb in Controls)
                 if (tb is TextBox)
-                {
-                    ((TextBox)tb).Text = String.Empty;
-                }
-            }
+                    ((TextBox) tb).Text = string.Empty;
 
             listBox1.SelectedItem = null;
         }
 
         /// <summary>
-        /// Validation - allow only digits for the age textBox
+        ///     Validation - allow only digits for the age textBox
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, "[^0-9]"))
+            if (Regex.IsMatch(textBox4.Text, "[^0-9]"))
             {
                 MessageBox.Show("Please enter only numbers.");
                 textBox4.Clear();
