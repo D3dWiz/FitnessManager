@@ -364,21 +364,5 @@ namespace FitnessManager.Presentation
             button10.Enabled = false;
             button11.Enabled = false;
         }
-
-        private void comboBox1_DropDownClosed(object sender, EventArgs e)
-        {
-        }
-
-        private void comboBox1_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

@@ -113,7 +113,6 @@
             this.Name = "PaymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentForm";
-            this.Load += new System.EventHandler(this.PaymentForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

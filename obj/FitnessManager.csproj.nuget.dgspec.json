@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Documents\\GitHub\\FitnessManager\\FitnessManager.csproj": {}
+    "C:\\Users\\denis\\OneDrive\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj": {}
   },
   "projects": {
-    "G:\\Documents\\GitHub\\FitnessManager\\FitnessManager.csproj": {
+    "C:\\Users\\denis\\OneDrive\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Documents\\GitHub\\FitnessManager\\FitnessManager.csproj",
+        "projectUniqueName": "C:\\Users\\denis\\OneDrive\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj",
         "projectName": "FitnessManager",
-        "projectPath": "G:\\Documents\\GitHub\\FitnessManager\\FitnessManager.csproj",
-        "packagesPath": "C:\\Users\\daa19\\.nuget\\packages\\",
-        "outputPath": "G:\\Documents\\GitHub\\FitnessManager\\obj\\",
+        "projectPath": "C:\\Users\\denis\\OneDrive\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj",
+        "packagesPath": "C:\\Users\\denis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\denis\\OneDrive\\Documents\\GitHub\\GetInForm\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\daa19\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\denis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -71,7 +76,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

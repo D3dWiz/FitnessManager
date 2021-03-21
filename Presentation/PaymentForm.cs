@@ -42,7 +42,7 @@ namespace FitnessManager.Presentation
         /// <param name="e"></param>
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(textBox1.Text, "[^0-9]"))
+            if (Regex.IsMatch(textBox1.Text, "[^0-9]") && textBox1.Text == ".")
             {
                 MessageBox.Show("Please enter only numbers.");
                 textBox1.Clear();
@@ -62,10 +62,6 @@ namespace FitnessManager.Presentation
             this.Visible = false;
             textBox1.Clear();
             label2.Text = $"$ 0:00";
-        }
-
-        private void PaymentForm_Load(object sender, EventArgs e)
-        {
         }
     }
 }
