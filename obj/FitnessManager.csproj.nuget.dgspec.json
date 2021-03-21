@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj": {}
+    "C:\\Users\\d3dpr\\Documents\\GitHub\\FitnessManager\\FitnessManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj": {
+    "C:\\Users\\d3dpr\\Documents\\GitHub\\FitnessManager\\FitnessManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj",
+        "projectUniqueName": "C:\\Users\\d3dpr\\Documents\\GitHub\\FitnessManager\\FitnessManager.csproj",
         "projectName": "FitnessManager",
-        "projectPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj",
+        "projectPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\FitnessManager\\FitnessManager.csproj",
         "packagesPath": "C:\\Users\\d3dpr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\obj\\",
+        "outputPath": "C:\\Users\\d3dpr\\Documents\\GitHub\\FitnessManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\d3dpr\\AppData\\Roaming\\NuGet\\NuGet.Config",

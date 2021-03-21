@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IDEPP2+mRqPGncEVgAz6kv+AH8iDFkwkwiLKOmmfz75xhRmTjNg9USY8PbetcY5nDzSpBzCgk0JCgwcxJe70Sw==",
+  "dgSpecHash": "Um20nOACiHmO0ME+ufJamgGO4poHTkwztgzIkdjjQ+4gzc/GkQHG+J60g0WFHkU6yiUif88qsT0bHliylBxfTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\d3dpr\\Documents\\GitHub\\GetInForm\\FitnessManager.csproj",
+  "projectFilePath": "C:\\Users\\d3dpr\\Documents\\GitHub\\FitnessManager\\FitnessManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\d3dpr\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\d3dpr\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
